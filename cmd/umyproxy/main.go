@@ -43,7 +43,7 @@ func init() {
 	flag.StringVar(&host, "host", "127.0.0.1", "mysql host")
 	flag.IntVar(&port, "port", 3306, "mysql port")
 	flag.StringVar(&socketfile, "socket", "/tmp/"+appname+".socket", "socket file path")
-	flag.IntVar(&poolsize, "size", runtime.NumCPU(), "pool size")
+	flag.IntVar(&poolsize, "size", runtime.NumCPU()*10, "pool size")
 	flag.IntVar(&maxlife, "life", 3600, "mysql connection max life time")
 	flag.IntVar(&waittimeout, "wait", 3000, "wait mysql connection timeout")
 	flag.BoolVar(&debug, "debug", false, "set debug mode")
